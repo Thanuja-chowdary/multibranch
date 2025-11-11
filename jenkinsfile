@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building Dashboard Module...'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing Dashboard Module...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying Dashboard Feature...'
+            }
+        }
+    }
+    post {
+        always {
+            echo 'Pipeline for Dashboard branch completed!'
+        }
+    }
+}
